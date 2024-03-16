@@ -4,7 +4,7 @@ package com.example.unittesting.non_ui_instrumental_test
 import android.content.Context
 import com.google.gson.Gson
 
-class UserManager() {
+class UserManager {
 
      var userList = emptyArray<User>()
      var currentUserIndex = 0
