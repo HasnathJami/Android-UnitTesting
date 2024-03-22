@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun sendDataToAnotherActivity(view: View) {
         val value = findViewById<EditText>(R.id.et_name).text.toString()
-        startActivity(Intent(this@MainActivity, SecondActivity::class.java).putExtra("name",value))
+        startActivity(Intent(this@MainActivity, SecondActivity::class.java).putExtra("name", value))
     }
 
     private fun handleButtonClickAction() {
