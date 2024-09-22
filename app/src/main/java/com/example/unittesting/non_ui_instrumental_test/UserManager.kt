@@ -20,8 +20,8 @@ class UserManager() {
         userList = gson.fromJson(json, Array<User>::class.java)
     }
 
-    fun populateUsers(user: Array<User>){
-        userList = user
+    fun populateUsers(users: Array<User>){
+        userList = users
     }
 
     fun getCurrentUser(): User {

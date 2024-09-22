@@ -17,6 +17,7 @@ class UserManagerTest {
 
     @Before
     fun setUp() {
+        //Arrange
         context = ApplicationProvider.getApplicationContext()
         userManager = UserManager()
     }
@@ -40,13 +41,18 @@ class UserManagerTest {
 
     @Test
     fun testPreviousUser_expected_CorrectUser() {
+        //Arrange
         userManager.populateUsers(
               arrayOf(
                   User("Jishan", "j@gmail.com"),
                   User("Jami", "jami@gmail.com")
               )
           )
+
+        //Act
         val user = userManager.getPreviousUser()
+
+        //Assert
         Assert.assertEquals("j@gmail.com", user.email)
     }
 
