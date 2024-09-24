@@ -18,7 +18,7 @@ class Helper {
             "Length of the password should be less than 15"
         }
 
-        else -> "Valid"
+        else -> "Valid Password"
     }
 
     fun reverseString(input: String?): String {
