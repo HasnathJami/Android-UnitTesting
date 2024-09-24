@@ -8,6 +8,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    var count = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,12 +16,20 @@ class MainActivity : AppCompatActivity() {
         handleButtonClickAction()
     }
 
-    private fun sendDataToAnotherActivity(view: View) {
+    private fun sendDataToAnotherActivity(view: View?) {
         val value = findViewById<EditText>(R.id.et_name).text.toString()
-        startActivity(Intent(this@MainActivity, SecondActivity::class.java).putExtra("name",value))
+        startActivity(Intent(this@MainActivity, SecondActivity::class.java).putExtra("name", value))
     }
 
     private fun handleButtonClickAction() {
-        findViewById<Button>(R.id.btn_send).setOnClickListener(::sendDataToAnotherActivity)
+//        findViewById<Button>(R.id.btn_send).setOnClickListener(::sendDataToAnotherActivity)
+        findViewById<Button>(R.id.btn_send).setOnClickListener {
+            count++;
+            if (count == 3) {
+                count = 0
+                sendDataToAnotherActivity(null)
+            }
+
+        }
     }
 }
