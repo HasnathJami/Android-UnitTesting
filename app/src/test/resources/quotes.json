@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "title": "Test Quote 1",
+    "description": "Test Quote Description 1"
+  },
+  {
+    "id": "2",
+    "title": "Test Quote 2",
+    "description": "Test Quote Description 2"
+  }
+]
